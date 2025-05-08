@@ -1,8 +1,8 @@
-module ulrichstahl.aufgabenverwaltung {
+module StahlU.aufgabenverwaltung {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.google.gson;
 
-    opens StahlU.Aufgabenverwaltung to javafx.fxml, com.google.gson;
-    exports StahlU.Aufgabenverwaltung;
+    opens StahlU.aufgabenverwaltung to javafx.fxml, com.google.gson;
+    exports StahlU.aufgabenverwaltung;
 }
