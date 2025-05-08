@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StahlU.aufgabenverwaltung.Controller">
+    <VBox prefHeight="400.0" prefWidth="650.0" spacing="10">
+        <padding>
+            <Insets bottom="20" left="20" right="20" top="20" />
+        </padding>
+
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Mitarbeiter Aufgabenverwaltung" />
+
+        <HBox spacing="10">
+            <VBox prefWidth="300" spacing="5">
+                <HBox prefHeight="82.0" prefWidth="300.0">
+                    <Label prefHeight="25.0" prefWidth="77.0" text="Mitarbeiter:">
+                        <HBox.margin>
+                            <Insets right="20.0" />
+                        </HBox.margin>
+                    </Label>
+                    <TextField fx:id="searchMitarbeiter" onKeyTyped="#search" prefHeight="25.0" prefWidth="205.0" promptText="Suche..." />
+                </HBox>
+                <ListView fx:id="mitarbeiterListView" prefHeight="400.0">
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis></ListView>
+                <HBox spacing="5">
+                    <TextField fx:id="neuerMitarbeiterField" promptText="Neuer Mitarbeiter" />
+                    <Button onAction="#addMitarbeiter" text="Hinzufügen" />
+                    <Button onAction="#removeMitarbeiter" text="Löschen" />
+                </HBox>
+            </VBox>
+
+            <VBox prefWidth="300" spacing="5">
+                <Label prefHeight="17.0" prefWidth="64.0" text="Aufgaben:">
+               <VBox.margin>
+                  <Insets bottom="4.0" top="5.0" />
+               </VBox.margin></Label>
+                <ListView fx:id="aufgabenListView" prefHeight="331.0" prefWidth="300.0" />
+                <HBox spacing="5">
+                    <TextField fx:id="neueAufgabeField" promptText="Neue Aufgabe" />
+                    <Button onAction="#addAufgabe" text="Hinzufügen" />
+                </HBox>
+            </VBox>
+        </HBox>
+
+
+    </VBox>
+</VBox>
